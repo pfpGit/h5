@@ -67,14 +67,62 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/swiper.animate.min.js"></script>
     <script>
-        var scaleW = window.innerWidth / 750,
-            scaleH = window.innerHeight / 1334,
-            resizes = document.querySelectorAll('.resize'),
-            props = ['width', 'height', 'top', 'left', 'bottom', 'right', 'fontSize', 'lineHeight', 'marginLeft', 'marginRight', 'marginBottom', 'marginTop', 'paddingLeft', 'paddingRight', 'paddingBottom', 'paddingTop']
-
+        var size = {};
+        size.scaleW = window.innerWidth / 750;
+        size.scaleH = window.innerHeight / 1334;
+        var resizes = document.querySelectorAll('.resize');
+        var props = [{
+            prop: 'width',
+            value: 'scaleW'
+        }, {
+            prop: 'height',
+            value: 'scaleH'
+        }, {
+            prop: 'top',
+            value: 'scaleH'
+        }, {
+            prop: 'left',
+            value: 'scaleW'
+        }, {
+            prop: 'bottom',
+            value: 'scaleH'
+        }, {
+            prop: 'right',
+            value: 'scaleW'
+        }, {
+            prop: 'fontSize',
+            value: 'scaleW'
+        }, {
+            prop: 'lineHeight',
+            value: 'scaleH'
+        }, {
+            prop: 'marginLeft',
+            value: 'scaleW'
+        }, {
+            prop: 'marginRight',
+            value: 'scaleW'
+        }, {
+            prop: 'marginBottom',
+            value: 'scaleH'
+        }, {
+            prop: 'marginTop',
+            value: 'scaleH'
+        }, {
+            prop: 'paddingLeft',
+            value: 'scaleW'
+        }, {
+            prop: 'paddingRight',
+            value: 'scaleW'
+        }, {
+            prop: 'paddingBottom',
+            value: 'scaleH'
+        }, {
+            prop: 'paddingTop',
+            value: 'scaleH'
+        }];
         for (var j = 0; j < resizes.length; j++) {
             props.forEach(function (item, index) {
-                resizes[j].style[item] = parseInt(resizes[j].style[item]) * scaleW + 'px';
+                resizes[j].style[item.prop] = parseInt(resizes[j].style[item.prop]) * size[item.value] + 'px';
             })
         }
 
