@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>佰仟金融IT部</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <section class="swiper-slide slide1">
+                <img src="./img/1.1.png" class="ani resize" style="width:670px;height:670px;left:40px;bottom:177px;z-index:3;" swiper-animate-effect="zoomIn"
+                    swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                <img src="./img/1-title.png" class="ani resize" style="width:468px;height:82px;left:138px;top:150px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                <img src="./img/1-subtitle.png" class="ani resize" style="width:518px;height:47px;left:114px;top:252px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+            </section>
+
+            <section class="swiper-slide slide2">
+                <img src="./img/2-title.png" class="ani resize" style="width:194px;height:42px;left:276px;top:60px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div class="ani resize" style="left:68px;right:68px;top:382px;z-index:3;font-size:26px;line-height:48px;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="1s">
+                    <p class="text">佰仟金融服务有限公司，成立于2013年年底，总部设立于深圳，国内领先的消费金融综合服务平台，普惠金融+互联网的践行者。</p>
+                    <p class="text">经过三年多的快速发展，佰仟金融已跻身国内消费金融服务行业领军企业，互联网金融服务蓬勃发展。之所以发展能快速发展，核心竞争力不是无本之术，是佰仟金融具有高效的”人+技术”，体系来支撑的，归根接地还是“人”，也就是佰仟金融——IT部。</p>
+                    <p class="text">自成立至今，从几十人发展到现在数百人的IT菁英团队，其中包括科技创新部、系统运营部、产品研发部、大数据部等10多个二级部门，实现了人与科技的融合，是一个富有激情、勇于创新，以实力成就佰仟梦想的团队。</p>
+                </div>
+            </section>
+
+            <section class="swiper-slide slide3">
+                <img src="./img/3-title.png" class="ani resize" style="width:345px;height:43px;left:205px;top:60px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="0s">
+
+                <img src="./img/3-1.png" class="ani resize" style="width:668px;height:150px;left:42px;top:162px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="1s">
+
+                <img src="./img/3-2.png" class="ani resize" style="width:668px;height:150px;left:42px;top:344px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="2s">
+
+                <img src="./img/3-3.png" class="ani resize" style="width:668px;height:150px;left:42px;top:525px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="3s">
+
+                <img src="./img/3-4.png" class="ani resize" style="width:668px;height:150px;left:42px;top:710px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="4s">
+
+                <img src="./img/3-5.png" class="ani resize" style="width:668px;height:150px;left:42px;top:892px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="5s">
+            </section>
+
+            <section class="swiper-slide slide4">
+                <img src="./img/3-title.png" class="ani resize" style="width:192px;height:43px;left:280px;top:60px;z-index:3;" swiper-animate-effect="bounceInLeft"
+                    swiper-animate-duration="1s" swiper-animate-delay="0s">
+            </section>
+
+        </div>
+
+        <img src="./img/arrow.png" style="width:60px;height:60px; bottom:47px; left:375px;" id="array" class="resize">
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <script>
+        var scaleW = window.innerWidth / 750,
+            scaleH = window.innerHeight / 1334,
+            resizes = document.querySelectorAll('.resize'),
+            props = ['width', 'height', 'top', 'left', 'bottom', 'right', 'fontSize', 'lineHeight', 'marginLeft', 'marginRight', 'marginBottom', 'marginTop', 'paddingLeft', 'paddingRight', 'paddingBottom', 'paddingTop']
+
+        for (var j = 0; j < resizes.length; j++) {
+            props.forEach(function (item, index) {
+                resizes[j].style[item] = parseInt(resizes[j].style[item]) * scaleW + 'px';
+            })
+        }
+
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            pagination: '.swiper-pagination',
+            //virtualTranslate : true,
+            mousewheelControl: true,
+            onInit: function (swiper) {
+                swiperAnimateCache(swiper);
+                swiperAnimate(swiper);
+            },
+            onSlideChangeEnd: function (swiper) {
+                swiperAnimate(swiper);
+            },
+            onTransitionEnd: function (swiper) {
+                swiperAnimate(swiper);
+            },
+
+            watchSlidesProgress: true,
+
+            onProgress: function (swiper) {
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slide = swiper.slides[i];
+                    var progress = slide.progress;
+                    var translate = progress * swiper.height / 4;
+                    scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+                    var opacity = 1 - Math.min(Math.abs(progress / 2), 0.5);
+                    slide.style.opacity = opacity;
+                    es = slide.style;
+                    es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,' + translate + 'px,-' + translate + 'px) scaleY(' + scale + ')';
+
+                }
+            },
+
+            onSetTransition: function (swiper, speed) {
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    es = swiper.slides[i].style;
+                    es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+
+                }
+            },
+
+        })
+    </script>
+</body>
+
+</html>
